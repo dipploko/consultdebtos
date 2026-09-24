@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="A G P Transportes LTDA — soluções em transporte com segurança, compromisso e eficiência.">
+  <meta name="theme-color" content="#0b1f33">
+
+  <title>A G P Transportes | Transporte e Logística</title>
+
+  <style>
+    :root {
+      --primary: #0b1f33;
+      --primary-light: #123653;
+      --accent: #f5a623;
+      --accent-hover: #d98d0b;
+      --white: #ffffff;
+      --light: #f5f7fa;
+      --text: #243444;
+      --muted: #667789;
+      --border: #e3e8ee;
+      --shadow: 0 15px 40px rgba(11, 31, 51, .10);
+      --radius: 16px;
+      --max: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 31, 51, .96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: .3px;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--accent);
+      display: grid;
+      place-items: center;
+      color: var(--primary);
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #dce7f0;
+      font-size: .95rem;
+      transition: .25s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .nav-button {
+      padding: 11px 18px;
+      background: var(--accent);
+      color: var(--primary);
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .nav-button:hover {
+      color: var(--primary);
+      background: #ffb83f;
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--white);
+      font-size: 1.7rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 720px;
+      padding-top: 78px;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(5,18,30,.96) 0%, rgba(11,31,51,.88) 48%, rgba(11,31,51,.55) 100%),
+        linear-gradient(135deg, #173c5c, #071521);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      right: -180px;
+      bottom: -220px;
+      border-radius: 50%;
+      border: 80px solid rgba(245,166,35,.10);
+    }
+
+    .hero-content {
+      max-width: 720px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-size: .78rem;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
+    }
+
+    .hero p {
+      max-width: 640px;
+      color: #d8e3ed;
+      font-size: 1.12rem;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      padding: 0 24px;
+      border-radius: 8px;
+      font-weight: 800;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.35);
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.08);
+    }
+
+    /* STATS */
+    .stats {
+      margin-top: -55px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .stat {
+      padding: 30px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.55rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    .section-label {
+      color: var(--accent-hover);
+      text-transform: uppercase;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-card {
+      min-height: 410px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(11,31,51,.95), rgba(18,54,83,.85)),
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          rgba(255,255,255,.025) 10px,
+          rgba(255,255,255,.025) 20px
+        );
+      box-shadow: var(--shadow);
+      padding: 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: var(--white);
+    }
+
+    .about-card .big {
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .about-card p {
+      color: #cbd8e4;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .check-list li {
+      margin-bottom: 13px;
+      font-weight: 700;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(245,166,35,.16);
+      color: var(--accent-hover);
+      font-weight: 900;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service {
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      transition: .25s;
+    }
+
+    .service:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: transparent;
+    }
+
+    .service-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #fff3dc;
+      color: var(--accent-hover);
+      font-size: 1.5rem;
+      margin-bottom: 22px;
+    }
+
+    .service h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* DIFFERENTIALS */
+    .differentials {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .differentials h2 {
+      color: var(--white);
+    }
+
+    .differentials .section-header p {
+      color: #bdcbd7;
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .diff {
+      padding: 28px 22px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .diff strong {
+      display: block;
+      color: var(--accent);
+      margin-bottom: 7px;
+      font-size: 1.05rem;
+    }
+
+    .diff p {
+      color: #c0cfdb;
+      font-size: .9rem;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 40px;
+    }
+
+    .contact-info,
+    .contact-form {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 38px;
+      box-shadow: 0 10px 30px rgba(11,31,51,.06);
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .contact-icon {
+      min-width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: #fff3dc;
+      color: var(--accent-hover);
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 3px;
+    }
+
+    .contact-item span {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 15px;
+      font: inherit;
+      outline: none;
+      color: var(--text);
+      transition: .2s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(245,166,35,.12);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .submit {
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 70px 0;
+      background: var(--accent);
+    }
+
+    .cta-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .cta p {
+      color: #394b5b;
+    }
+
+    .cta .btn {
+      background: var(--primary);
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    .cta .btn:hover {
+      background: var(--primary-light);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #071521;
+      color: #aebdca;
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 40px;
+    }
+
+    footer .logo {
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      font-size: .9rem;
+      max-width: 420px;
+    }
+
+    footer h4 {
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 9px;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: .82rem;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      font-size: 1.65rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
+      z-index: 900;
+      transition: .2s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .stats-grid,
+      .services-grid,
+      .diff-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: 650px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .stats-grid,
+      .services-grid,
+      .diff-grid,
+      .footer-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+
+      .about-card {
+        min-height: 320px;
+        padding: 30px;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 25px;
+      }
+
+      .copyright {
+        flex-direction: column;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+
+      <a href="#inicio" class="logo">
+        <span class="logo-icon">AGP</span>
+        <span>A G P Transportes</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <nav id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+        <a href="#contato" class="nav-button">Solicitar contato</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="inicio">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="eyebrow">Transporte & Logística</div>
+
+          <h1>
+            Transporte com
+            <span style="color:var(--accent)">segurança</span>
+            e compromisso.
+          </h1>
+
+          <p>
+            A G P Transportes oferece soluções de transporte com foco em
+            responsabilidade, eficiência e atendimento próximo aos seus clientes.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary">
+              Fale conosco
+            </a>
+
+            <a href="#servicos" class="btn btn-outline">
+              Conheça nossos serviços
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" style="padding:0;">
+      <div class="container">
+        <div class="stats-grid">
+
+          <div class="stat">
+            <strong>2024</strong>
+            <span>Ano de fundação</span>
+          </div>
+
+          <div class="stat">
+            <strong>ME</strong>
+            <span>Microempresa</span>
+          </div>
+
+          <div class="stat">
+            <strong>TO</strong>
+            <span>Atuação em Tocantins</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EMPRESA -->
+    <section id="empresa" class="about">
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-card">
+            <div class="big">AGP</div>
+            <h3>A G P Transportes</h3>
+            <p>
+              Uma empresa dedicada a oferecer serviços de transporte
+              com profissionalismo, organização e compromisso.
+            </p>
+          </div>
+
+          <div class="about-text">
+
+            <div class="section-label">Sobre a empresa</div>
+
+            <h2>
+              Compromisso em cada percurso.
+            </h2>
+
+            <p>
+              A A G P Transportes LTDA é uma empresa do segmento de
+              transporte, estabelecida em Augustinópolis, Tocantins.
+            </p>
+
+            <p>
+              Nosso propósito é proporcionar um atendimento profissional,
+              buscando eficiência operacional e relacionamento de confiança
+              com clientes e parceiros.
+            </p>
+
+            <ul class="check-list">
+              <li>Atendimento profissional</li>
+              <li>Compromisso com prazos</li>
+              <li>Responsabilidade no transporte</li>
+              <li>Relacionamento de confiança</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-label">O que fazemos</div>
+          <h2>Soluções em transporte</h2>
+          <p>
+            Estrutura preparada para atender demandas de transporte
+            de maneira organizada e responsável.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service">
+            <div class="service-icon">🚚</div>
+            <h3>Transporte</h3>
+            <p>
+              Serviços de transporte com foco em segurança,
+              organização e cumprimento das demandas.
+            </p>
+          </article>
+
+          <article class="service">
+            <div class="service-icon">📦</div>
+            <h3>Cargas</h3>
+            <p>
+              Soluções para movimentação de cargas, buscando
+              eficiência e cuidado em todas as etapas.
+            </p>
+          </article>
+
+          <article class="service">
+            <div class="service-icon">📍</div>
+            <h3>Logística</h3>
+            <p>
+              Planejamento e organização para tornar as operações
+              de transporte mais eficientes.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="differentials">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-label">Nossos valores</div>
+          <h2>Por que escolher a AGP?</h2>
+          <p>
+            Nosso trabalho é baseado em princípios que fortalecem
+            cada relacionamento profissional.
+          </p>
+        </div>
+
+        <div class="diff-grid">
+
+          <div class="diff">
+            <strong>01 · Segurança</strong>
+            <p>
+              Cuidado e responsabilidade nas operações de transporte.
+            </p>
+          </div>
+
+          <div class="diff">
+            <strong>02 · Compromisso</strong>
+            <p>
+              Dedicação para atender às necessidades de cada cliente.
+            </p>
+          </div>
+
+          <div class="diff">
+            <strong>03 · Eficiência</strong>
+            <p>
+              Organização para buscar melhores resultados operacionais.
+            </p>
+          </div>
+
+          <div class="diff">
+            <strong>04 · Confiança</strong>
+            <p>
+              Relações profissionais baseadas em transparência e respeito.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-label">Entre em contato</div>
+          <h2>Vamos conversar?</h2>
+          <p>
+            Entre em contato com a A G P Transportes para saber mais
+            sobre nossos serviços.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Endereço</strong>
+                <span>
+                  Rua Dom Pedro I, 97 — Letra B<br>
+                  Centro — Augustinópolis/TO<br>
+                  CEP 77960-000
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">🏢</div>
+              <div>
+                <strong>CNPJ</strong>
+                <span>54.339.479/0001-14</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📋</div>
+              <div>
+                <strong>Razão Social</strong>
+                <span>A G P Transportes LTDA</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📅</div>
+              <div>
+                <strong>Empresa ativa</strong>
+                <span>Desde 15 de março de 2024</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="contact-form">
+
+            <form id="contactForm">
+
+              <div class="form-row">
+                <input
+                  type="text"
+                  id="nome"
+                  placeholder="Seu nome"
+                  required
+                >
+
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Seu e-mail"
+                  required
+                >
+              </div>
+
+              <input
+                type="tel"
+                id="telefone"
+                placeholder="Telefone"
+              >
+
+              <textarea
+                id="mensagem"
+                placeholder="Como podemos ajudar?"
+                required
+              ></textarea>
+
+              <button class="btn btn-primary submit" type="submit">
+                Enviar mensagem
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+
+        <div class="cta-content">
+          <div>
+            <h2>Precisa de uma solução em transporte?</h2>
+            <p>Fale com a A G P Transportes.</p>
+          </div>
+
+          <a href="#contato" class="btn">
+            Solicitar contato →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <a href="#inicio" class="logo">
+            <span class="logo-icon">AGP</span>
+            <span>A G P Transportes</span>
+          </a>
+
+          <p>
+            Transporte com segurança, compromisso e eficiência.
+          </p>
+        </div>
+
+        <div>
+          <h4>Navegação</h4>
+
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#empresa">Empresa</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Localização</h4>
+
+          <p>
+            Rua Dom Pedro I, 97 — Letra B<br>
+            Centro — Augustinópolis/TO<br>
+            CEP 77960-000
+          </p>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        <span>
+          © <span id="year"></span> A G P Transportes LTDA.
+          Todos os direitos reservados.
+        </span>
+
+        <span>CNPJ 54.339.479/0001-14</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a
+    class="whatsapp"
+    href="#contato"
+    aria-label="Entrar em contato"
+    title="Entrar em contato"
+  >
+    ☎
+  </a>
+
+  <script>
+    // Menu mobile
+    const menuBtn = document.getElementById("menuBtn");
+    const nav = document.getElementById("nav");
+
+    menuBtn.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    // Fecha menu ao clicar em um link
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
+    });
+
+    // Ano automático
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Formulário
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const telefone = document.getElementById("telefone").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
+
+      const texto =
+        `Olá, A G P Transportes!
+
+` +
+        `Nome: ${nome}
+` +
+        `E-mail: ${email}
+` +
+        `Telefone: ${telefone}
+` +
+        `Mensagem: ${mensagem}`;
+
+      /*
+        O formulário abaixo abre o cliente de e-mail do visitante.
+        Substitua o endereço pelo e-mail comercial real da empresa
+        quando você tiver o endereço completo.
+      */
+      window.location.href =
+        "mailto:SEU-EMAIL@DOMINIO.COM" +
+        "?subject=" + encodeURIComponent("Contato pelo site") +
+        "&body=" + encodeURIComponent(texto);
+    });
+  </script>
+
+</body>
+</html>
